@@ -30,4 +30,9 @@ class WebActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onBackPressed() {
+        if(mywebview.canGoBack())mywebview.goBack()else
+        super.onBackPressed()
+    }
 }
